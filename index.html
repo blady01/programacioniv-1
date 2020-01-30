@@ -5,8 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bienvenido a Programacion IV</title>
-</head>
+</head> 
 <body>
     <h1>Bienvenidos a Programacion IV</h1>
+    <form name="frmControles" id="frmcontroles" method="GET">
+        <input type="text" pattern="[a-zA-ZñÑ ]{3,60}" required size="20" placeholder="Nombre"><br><br>
+        Fecha de Nacimiento: <input type="date" required><br><br>
+        Status:
+        <label for="soltero">Soltero</label><input type="radio" name="cboStatus" id="soltero">
+        <label for="acompañado">acompañado</label><input type="radio" name="cboStatus" id="acompañado">
+        <label for="casado">Casado</label><input type="radio" name="cboStatus" id="casado">
+        <label for="divorciado">Divorciado</label><input type="radio" name="cboStatus" id="divorciado">
+        <label for="viudo">Viudo</label><input type="radio" name="cboStatus" id="viudo"><br><br>
+        Habilidades:
+        <label for="php">php</label><input type="checkbox" name="php" id="php">
+        <label for="html">html</label><input type="checkbox" name="html" id="html">
+        <label for="css">css</label><input type="checkbox" name="css" id="css">
+        <label for="js">js</label><input type="checkbox" name="js" id="js">
+        <label for="ajax">ajax</label><input type="checkbox" name="ajax" id="ajax">
+        <label for="json">json</label><input type="checkbox" name="json" id="json">
+        <label for="nodejs">nodejs</label><input type="checkbox" name="nodejs" id="nodejs">
+        <label for="websocket">websocket</label><input type="checkbox" name="websocket" id="websocket">
+        <input type="submit" value="Guardar">
+    </form>
 </body>
 </html>
