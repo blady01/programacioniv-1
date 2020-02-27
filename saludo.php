@@ -10,4 +10,6 @@
     }else{
         header('location:index.html');
     }
+
+    echo htmlentities($nombre, ENT_QUOTES, "UTF-8");
 ?>
