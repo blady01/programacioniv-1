@@ -4,10 +4,8 @@
     
     if($_GET && isset($_GET['nombre'])){
         $nombre = $_GET['nombre'];
-        echo 'Hola '. $nombre.' desde el servidor '. date('d-m-Y H:i:s');
+        echo 'Hola '. htmlentities($nombre, ENT_QUOTES, "UTF-8").' desde el servidor '. date('d-m-Y H:i:s');
     }else{
         header('location:index.html');
     }
-
-    echo htmlentities($nombre, ENT_QUOTES, "UTF-8");
 ?>
