@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Estadistica</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilos.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src='funciones.js'></script>
+</head>
+<body class="body">
+    <form>
+        <p class="text-center text-white titulo">APP ESTADISTICA</p>
+
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <input type="text" class="txt" required placeholder="Ingrese los Numeros..." id="txtnumero">
+                <input type="text" class="txt" required placeholder="Ingrese la frecuencia..."id="txtfrecuencia">
+            </div>
+            <div class="row justify-content-md-center separacion">
+                <input class="btn btn-primary btn-lg" type="button" value="Guardar" onclick="calcular()">
+                <input class="btn btn-danger btn-lg ml-5" type="button" value="Limpiar" onclick="limpiar()">
+            </div>
+        </div>
+
+        <section class="separacion">
+            <table class="table text-white">
+                <thead>
+                  <tr>
+                    <th scope="col">Numeros</th>
+                    <th scope="col">Frecuecia</th>
+                    <th scope="col">FI</th>
+                    <th scope="col">XI*FI</th>
+                    <th scope="col">XI2*FI</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+                 
+                </tbody>
+              </table>
+        </section>
+        <div>
+            <p class="text-center text-white" id="lblmedia">MEDIA:</p>
+            <p class="text-center text-white" id="lblmediana">MEDIANA:</p>
+            <p class="text-center text-white" id="lblmoda">MODA:</p>
+            <p class="text-center text-white" id="lbldestip">DESVIACION TIPICA:</p>
+        </div>
+    </form>
+
+</body>
+</html>
