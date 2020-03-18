@@ -1,5 +1,5 @@
 <?php
-/** Clase principal de conexion a la base de datos desde PHP -> MySQ */
+/** Clase principal de conexion a la base de datos desde PHP -> MySQL */
 class DB{
     private $conexion, $result;
 
