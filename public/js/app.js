@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", event => {
         e.stopPropagation();
 
         let modulo = e.toElement.dataset.modulo;
-        //ajax vista alumnos
-        fetch('public/vistas/alumnos/alumnos.html').then(resp => resp.text()).then(resp => {
+        //ajax general
+        fetch(`public/vistas/${modulo}/${modulo}.html`).then(resp => resp.text()).then(resp => {
             $(`#vistas-${modulo}`).innerHTML = resp;
 
             let btnCerrar = $(".close");
@@ -19,19 +19,6 @@ document.addEventListener("DOMContentLoaded", event => {
             script.src = `public/vistas/${modulo}/${modulo}.js`;
             cuerpo.appendChild(script);
         });
-        //ajax vista docentes
-        fetch('public/vistas/docentes/docentes.html').then(resp => resp.text()).then(resp => {
-            $(`#vistas-${modulo}`).innerHTML = resp;
-
-            let btnCerrar = $(".close");
-            btnCerrar.addEventListener("click", event => {
-                $(`#vistas-${modulo}`).innerHTML = "";
-            });
-
-            let cuerpo = $("body"),
-                script = document.createElement("script");
-            script.src = `public/vistas/${modulo}/${modulo}.js`;
-            cuerpo.appendChild(script);
-        });
+        
     });
 });
