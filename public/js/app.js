@@ -2,6 +2,7 @@ var $ = el => document.querySelector(el);
 document.addEventListener("DOMContentLoaded", event => {
     let mostrarVista = $(`[class*="mostrar-"]`);
     mostrarVista.addEventListener('click', e => {
+        e.stopPropagation();
 
         let modulo = e.toElement.dataset.modulo;
         //ajax general
