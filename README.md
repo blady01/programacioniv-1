@@ -25,7 +25,7 @@ XAMMP
 
 ## Construido con 🛠️
 
-_Herramientas utilziadas para el desarrollo del proyecto_
+_Herramientas utilizadas para el desarrollo del proyecto_
 
 * [Visual Studio code](https://code.visualstudio.com/) - Editor de codigo utilizado
 * [XAMMP](https://www.apachefriends.org/es/index.html) - entorno más popular de desarrollo con PHP
