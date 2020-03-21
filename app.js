@@ -1,36 +1,54 @@
 document.addEventListener("DOMContentLoaded", e=>{
     document.querySelector("#frmAlumnos").addEventListener("submit", event=>{
-        event.preventDefault();
-
-        let codigo = document.querySelector("#txtCodigoAlumno").value,
-            nombre = document.querySelector("#txtNombreAlumno").value,
-            direccion = document.querySelector("#txtDireccionAlumno").value,
-            telefono = document.querySelector("#txtTelefonoAlumno").value;
-
-        console.log(codigo, nombre, direccion, telefono);
-        
-        if( 'localStorage' in window ){
-            window.localStorage.setItem("codigo", codigo);
-            window.localStorage.setItem("nombre", nombre);
-            window.localStorage.setItem("direccion", direccion);
-            window.localStorage.setItem("telefono", telefono);
-        } else {
-            alert("Por favor ACTUALIZATE!!!.");
-        }
+        guardarRegistro();
     });
-    document.querySelector("#btnRecuperarAlumno").addEventListener("click", event=>{
-        document.querySelector("#txtCodigoAlumno").value = window.localStorage.getItem("codigo");
-        document.querySelector("#txtNombreAlumno").value = window.localStorage.getItem("nombre");
-        document.querySelector("#txtDireccionAlumno").value = window.localStorage.getItem("direccion");
-        document.querySelector("#txtTelefonoAlumno").value = window.localStorage.getItem("telefono");
+     document.querySelector("#btnnuevo").addEventListener("click", event=>{
+        limpiar();
     });
+    document.querySelector("#btnbuscar").addEventListener("click", event=>{
+        buscar();
+   });
 });
 
-/*document.addEventListener("DOMContentLoaded",function(e){
-    alert("CALLBACK LISTO");
-});*/
+function limpiar(){
+        document.querySelector("#txtcodigo").value = "";
+        document.querySelector("#txtnombre").value = "";
+        document.querySelector("#txtapellido").value = "";
+        document.querySelector("#txtfecha").value = "";
+        document.querySelector("#txttel").value="";
+        document.querySelector("#txtdireccion").value="";
+}
 
-/*document.addEventListener("DOMContentLoaded", init);
-function init(e){
-    alert("LISTO");
-}*/
+function guardarRegistro(e){
+    event.preventDefault();
+
+    let codigo=document.querySelector("#txtcodigo").value,
+    nombre=document.querySelector("#txtnombre").value,
+    apellido=document.querySelector("#txtapellido").value,
+    fecha=document.querySelector("#txtfecha").value,
+    telefono=document.querySelector("#txttel").value,
+    direccion=document.querySelector("#txtdireccion").value;
+
+    console.log(nombre, apellido, fecha, telefono, direccion);
+
+    if( 'localStorage' in window ){
+        window.localStorage.setItem("codigo" + codigo, codigo);
+        window.localStorage.setItem("nombre" + codigo, nombre);
+        window.localStorage.setItem("apellido" + codigo, apellido);
+        window.localStorage.setItem("fech" + codigo, fecha);
+        window.localStorage.setItem("direccion" + codigo, direccion);
+        window.localStorage.setItem("telefono" + codigo, telefono);
+    } else {
+        alert("Por favor ACTUALIZATE!!!.");
+    }
+}
+
+function buscar(){
+    let codigo=document.querySelector("#txtcodigo").value;
+    document.querySelector("#txtnombre").value=window.localStorage.getItem("nombre" + codigo);
+    document.querySelector("#txtapellido").value=window.localStorage.getItem("apellido" + codigo);
+    document.querySelector("#txtfecha").value=window.localStorage.getItem("fecha" + codigo);
+    document.querySelector("#txttel").value=window.localStorage.getItem("telefono" + codigo);
+    document.querySelector("#txtdireccion").value=window.localStorage.getItem("direccion" + codigo);
+
+}

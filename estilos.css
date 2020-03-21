@@ -1,45 +1,97 @@
-bbody{
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
+.controlform{
+    background:#EFEFEF;
+    width: 500px;
+    height: 510px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 25px;
 }
-body > h1{
-    background-color: brown;
-    margin: 10px;
-}
-input{
-    height: 24px;
-    border: 1px solid rgb(129, 131, 134);
+
+.controltitulo{
+    font-weight: bold;
+	color: rgb(160, 156, 156);
+	font-size: 18px;
     border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    text-align: center;
 }
-input[type=submit],
-input[type=button],
-input[type=file]{
-    background-color: rgb(142, 176, 238);
+
+.buttonBuscar{
+    background-color: #31B1E5;
     color: #FFF;
-    text-transform: uppercase;
     font-weight: bolder;
     height: 32px;
+    margin-left: 10px;
+
 }
-input[type=submit]:hover,
-input[type=button]:hover,
-input[type=file]:hover{
-    color:  rgb(56, 99, 218);
-    background-color: #FFF;
+
+.centrarH{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 input[type=text]:invalid,
 input[type=date]:invalid,
-input[type=file]:invalid,
-input[type=url]:invalid,
-input[type=tel]:invalid{
-    background-color: rgb(250, 156, 156);
+input[type=file]:invalid{
+    background-color:rgb(230, 119, 119);
     color: black;
 }
+
+input[type=text],
+    [type=date]{
+    background-color: #24303c;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    width: 92%;
+    border: 1px, solid #1f53c5;
+}
+
 input[type=text]:valid, /* Estilo para los input de tipo text, date y file */
 input[type=date]:valid, /* Cuando es valido su contenido */
-input[type=file]:valid,
-input[type=url]:valid,
-input[type=tel]:valid{
-    background-color: rgb(134, 250, 173);
-    color: black;
+input[type=file]:valid{
+    background-color: rgb(110, 221, 96);
+    color: white;
+}
+
+input[type=submit] {
+    background-color: #31B1E5;
+    color: #FFF;
+    font-weight: bolder;
+    height: 32px;
+    width: 100%;
+    size: 100%;
+    margin-top: 5px;
+}
+
+input[type=submit]:hover,
+input[id="btnnuevo"]:hover,
+input[id="btnlimpiar"]:hover {
+    background-color: white;
+    color: blue;
+}
+
+body{
+    background-color: #9AD1ED
+}
+.controltitulo > span{
+    color: #F39B53;
+}
+
+input[id="btnnuevo"] {
+    background-color: #EDA135;
+    color: #FFF;
+    font-weight: bolder;
+    height: 32px;
+    width: 100%;
+    size: 100%;
+    margin-top: 5px;
 }
