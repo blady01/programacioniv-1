@@ -1,6 +1,6 @@
-# Programacion Computacion IV
+# Programacion Computacional IV
 
-_Recopilacion de practicas de la catedra programacion computacional iv_
+_Recopilacion de practicas de la catedra programacion computacional iv - UGB_
 
 ## Comenzando 🚀
 
