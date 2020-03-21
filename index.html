@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portal del Estudiante</title>
+    <link rel="stylesheet" href="estilos.css">
+</head> 
+<body>
+    <div class="div"></div><br><br>
+    <form class="form" method="POST" action="javascript:void(0)" enctype="multipart/form-data">
+      <h3>Portal del Estudiante</h3>
+      <p class="para1"><span>Es necesario iniciar sesión en su cuenta para inscribirse a un curso.</span></p>
+      <p class="para2"><span class="span1">¿ERES NUEV@?</span><span class="span2">REGISTRATE</span></p>
+
+      <div class="register">
+        <input type="text" name="username" required placeholder="Nombre de Usuario" autocompleter="off"
+                pattern="^[A-Za-z0-9._-]{6,10} $" size="40" maxlength="10">
+        <br><br>
+        <input type="email" name="emailid" required placeholder="E-mail" autocompleter="off"
+                  pattern="^[A-Za-z0-9 _.-]+@[A-Za-z.-]+\.[A-Za-z]{3,4}$ " size="40" maxlength="30">
+        <br><br>
+        <input type="password" name="password" required placeholder="Contraseña" autocompleter="off"
+                  pattern="^[A-Za-z0-9 _.-]{8,15} $" size="40" maxlength="15">
+        <br><br>
+        <input type="password" name="confirmpassword" required placeholder="Confirme contraseña" 
+                  pattern="^[A-Za-z0-9 _.-]{8,15}$ " size="40" maxlength="15" autocompleter="off">
+        <br><br>
+        <input type="submit" name="register" value="Enviar" class="submitbutton">
+      </div>
+      <div class="login">
+        <p class="para3"><span class="span3">¿ERES ESTUDIANTE?</span><span class="span3">LOGUEATE</span></p>
+        <br><br>
+        <input type="text" name="loginname" required placeholder="Nombre de Usuario" autocompleter="off"
+                pattern="^[A-Za-z0-9._-]{6,10} $" size="40" maxlength="10">
+        <br><br>
+        <input type="password" name="loginpassword" required placeholder="Contraseña" autocompleter="off"
+                  pattern="^[A-Za-z0-9 _.-]{8,15}$ " size="40" maxlength="15">
+        <br><br>
+        <input type="checkbox" name="remember" value="yes"><span class="checkbox">¿Recuerdame?</span>
+        <br><br>
+        <input type="submit" name="register" value="Entrar" class="loginbutton">
+        <span class="span4">¿Olvidaste Contraseña?</span>
+      </div>
+    </form>
+</body>
+</html>
