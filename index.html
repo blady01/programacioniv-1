@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Tabla Estadistica Dinamica</title>
+    
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="lib/alertifyjs/css/alertify.css">
+    <link rel="stylesheet" type="text/css" href="lib/alertifyjs/css/themes/default.css">
+
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="lib/alertifyjs/alertify.js"></script>
+    <script src="https://kit.fontawesome.com/9a8d5ad470.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="text-center container">
+      <div id="table-di"></div>
+    </div>
+
+<!-- Modal para registros nuevos -->
+
+<div class="modal fade" id="modalNuevo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Agrega datos estadisticos</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <label>Nombre de clase (xi):    </label>
+        <input type="text" name="" id="clases" class="form-control input-sm">
+        <label>Frecuencia absoluta (fi):</label>
+        <input type="text" name="" id="frecuencia" class="form-control input-sm">
+        
+        <input type="text" hidden="" name="" id="frecacu" class="form-control input-sm">
+        <input type="text" hidden="" name="" id="xifi" class="form-control input-sm">
+        <input type="text" hidden="" name="" id="xi2fi" class="form-control input-sm">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="guardarnuevo">
+            Agregar
+        </button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para edicion de datos -->
+
+<div class="modal fade" id="modalEdicion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Actualizar datos estadisticos</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" hidden="" name="" id="iddato">
+        <label>Nombre de clase (xi):    </label>
+            <input type="text" name="" id="clasesu" class="form-control input-sm">
+        <label>Frecuencia absoluta (fi):</label>
+        <input type="text" name="" id="frecuenciau" class="form-control input-sm">
+
+        <input type="text" hidden="" name="" id="frecacuu" class="form-control input-sm">
+        <input type="text" hidden="" name="" id="xifiu" class="form-control input-sm">
+        <input type="text" hidden="" name="" id="xi2fiu" class="form-control input-sm">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal" id="actualizadatos">Actualizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#table-di').load('components/table.php');
+    });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#guardarnuevo').click(function(){
+      clases= $('#clases').val();
+      frecuencia=$('#frecuencia').val();
+      agregardatos(clases, frecuencia);
+    });
+
+    $('#actualizadatos').click(function(){
+      actualizaDatos();
+    });
+
+  });
+</script>
