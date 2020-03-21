@@ -1,5 +1,5 @@
 .controlform{
-    background:#EFEFEF;
+    background: #292b2c;
     width: 500px;
     height: 510px;
     border-radius: 10px;
@@ -20,7 +20,7 @@
 }
 
 .buttonBuscar{
-    background-color: #31B1E5;
+    background-color: #f0ad4e;
     color: #FFF;
     font-weight: bolder;
     height: 32px;
@@ -63,7 +63,7 @@ input[type=file]:valid{
 }
 
 input[type=submit] {
-    background-color: #31B1E5;
+    background-color: #5CB85C;
     color: #FFF;
     font-weight: bolder;
     height: 32px;
@@ -80,14 +80,14 @@ input[id="btnlimpiar"]:hover {
 }
 
 body{
-    background-color: #9AD1ED
+    background-color: rgb(128, 128, 128)
 }
 .controltitulo > span{
     color: #F39B53;
 }
 
 input[id="btnnuevo"] {
-    background-color: #EDA135;
+    background-color: #0275d8;
     color: #FFF;
     font-weight: bolder;
     height: 32px;
