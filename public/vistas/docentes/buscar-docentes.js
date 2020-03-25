@@ -38,13 +38,13 @@ export function modulo() {
             $("#tbl-buscar-docentes > tbody").innerHTML = filas;
             $("#tbl-buscar-docentes > tbody").addEventListener("click", e => {
                 if (e.srcElement.parentNode.dataset.docente == null) {
-                        var mensaje = confirm("¿Desea eliminar el registro de docente?");
-                        if (mensaje){
-                            alert("¡Registro eliminado con exito!");
-                            eliminarDocente(e.srcElement.parentNode.parentNode.dataset.iddocente);
-                        } else {
-                            alert("¡El registro no ha sido eliminado!");
-                        }   
+                    var mensaje = confirm("¿Desea eliminar el registro de docente?");
+                    if (mensaje){
+                        alert("¡Registro eliminado con exito!");
+                        eliminarDocente(e.srcElement.parentNode.parentNode.dataset.iddocente);
+                    } else {
+                        alert("¡El registro no ha sido eliminado!");
+                    }   
                 } else {
                     modificarDocente(JSON.parse(e.srcElement.parentNode.dataset.docente));
                 }

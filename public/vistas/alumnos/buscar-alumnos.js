@@ -36,7 +36,7 @@ export function modulo(){
             $("#tbl-buscar-alumnos > tbody").innerHTML = filas;
             $("#tbl-buscar-alumnos > tbody").addEventListener("click",e=>{
                 if( e.srcElement.parentNode.dataset.alumno==null ){
-                    var mensaje = confirm("¿Desea eliminar el registro del Alumno?");
+                    var mensaje = confirm("¿Desea eliminar el registro del alumno?");
                     if (mensaje) {
                         alert("¡Registro eliminado con exito!");
                         eliminarAlumno(e.srcElement.parentNode.parentNode.dataset.idalumno);
