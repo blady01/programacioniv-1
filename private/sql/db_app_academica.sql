@@ -27,6 +27,7 @@ CREATE TABLE `docentes` (
   `idDocente` int(10) NOT NULL,
   `codigo` char(8) COLLATE utf8_spanish_ci NOT NULL,
   `nombre` char(50) COLLATE utf8_spanish_ci NOT NULL,
+  `dui` char(10) COLLATE utf8_spanish_ci NOT NULL,
   `direccion` char(65) COLLATE utf8_spanish_ci NOT NULL,
   `telefono` char(9) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;

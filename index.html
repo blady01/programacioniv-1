@@ -1,51 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bienvenido a Programacion IV</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/css/estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>APP ACADEMICA</title>
 </head>
 <body class="bg-dark">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-      <a class="navbar-brand" href="#">::.. APP ACADEMICA ..::</a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">INICIO <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mostrar-alumnos" data-modulo="alumnos" name="navSelect" href="#">ALUMNOS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mostrar-docentes" data-modulo="docentes" name="navSelect" href="#">DOCENTES</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mostrar-materias" data-modulo="materias" name="navSelect" href="#">MATERIAS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mostrar-matricula" data-modulo="matricula" name="navSelect" href="#">MATRICULA</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mostrar-inscripcion" data-modulo="inscripcion" name="navSelect" href="#">INSCRIPCION</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mostrar-notas" data-modulo="notas" name="navSelect" href="#">NOTAS</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div id="modulos">
-      <div id="vistas-alumnos"></div>
-      <div id="vistas-docentes"></div>
-      <div id="vistas-materias"></div>
-      <div id="vistas-matricula"></div>
-      <div id="vistas-inscripcion"></div>
-      <div id="vistas-notas"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary ml-auto mr-auto">
+    <a class="navbar-brand" href="#">::.. APP ACADEMIA ..::</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">INICIO <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mostrar-alumnos" data-modulo="alumnos" data-form="alumnos" href="#">ALUMNOS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mostrar-docentes" data-modulo="docentes" data-form="docentes" href="#">DOCENTES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mostrar-materias" data-modulo="materias" data-form="materias" href="#">MATERIAS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mostrar-matricula" data-modulo="matricula" data-form="matricula" href="#">MATRICULA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mostrar-inscripcion" data-modulo="inscripcion" data-form="inscripcion" href="#">INSCRIPCION</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mostrar-notas" data-modulo="notas" data-form="notas" href="#">NOTAS</a>
+        </li>
+      </ul>
     </div>
+  </nav>
+  <div class="container">
+    <div class="modulos" id="vistas-alumnos"></div>
+    <div class="modulos" id="vistas-buscar-alumnos"></div>
+    <div class="modulos" id="vistas-docentes"></div>
+    <div class="modulos" id="vistas-buscar-docentes"></div>
+    <div class="modulos" id="vistas-materias"></div>
+    <div class="modulos" id="vistas-matricula"></div>
+    <div class="modulos" id="vistas-inscripcion"></div>
+    <div class="modulos" id="vistas-notas"></div>
   </div>
-  <script src="public/js/app.js"></script>
+  <script type="module" src="public/js/app.js"></script>
 </body>
 </html>

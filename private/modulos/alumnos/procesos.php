@@ -29,6 +29,8 @@ class alumno{
         }
         if( empty($this->datos['direccion']) ){
             $this->respuesta['msg'] = 'por favor ingrese la direccion del estudiante';
+        }if( empty($this->datos['telefono']) ){
+            $this->respuesta['msg'] = 'por favor ingrese el telefono del estudiante';
         }
         $this->almacenar_alumno();
     }
@@ -44,8 +46,34 @@ class alumno{
                     )
                 ');
                 $this->respuesta['msg'] = 'Registro insertado correctamente';
+            } else if( $this->datos['accion']==='modificar' ){
+                $this->db->consultas('
+                   UPDATE alumnos SET
+                        codigo     = "'. $this->datos['codigo'] .'",
+                        nombre     = "'. $this->datos['nombre'] .'",
+                        direccion  = "'. $this->datos['direccion'] .'",
+                        telefono   = "'. $this->datos['telefono'] .'"
+                    WHERE idAlumno = "'. $this->datos['idAlumno'] .'"
+                ');
+                $this->respuesta['msg'] = 'Registro actualizado correctamente';
             }
         }
+    }
+    public function buscarAlumno($valor=''){
+        $this->db->consultas('
+            select alumnos.idAlumno, alumnos.codigo, alumnos.nombre, alumnos.direccion, alumnos.telefono
+            from alumnos
+            where alumnos.codigo like "%'.$valor.'%" or alumnos.nombre like "%'.$valor.'%"
+        ');
+        return $this->respuesta = $this->db->obtener_datos();
+    }
+    public function eliminarAlumno($idAlumno=''){
+        $this->db->consultas('
+            delete alumnos
+            from alumnos
+            where alumnos.idAlumno = "'.$idAlumno.'"
+        ');
+        $this->respuesta['msg'] = 'Registro eliminado correctamente';
     }
 }
 ?>
