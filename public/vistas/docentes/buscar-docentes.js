@@ -37,6 +37,9 @@ export function modulo() {
             });
             $("#tbl-buscar-docentes > tbody").innerHTML = filas;
             $("#tbl-buscar-docentes > tbody").addEventListener("click", e => {
+                e.preventDefault();
+                e.stopPropagation();
+                
                 if (e.srcElement.parentNode.dataset.docente == null) {
                     var mensaje = confirm("¿Desea eliminar el registro de docente?");
                     if (mensaje){
