@@ -25,9 +25,21 @@
                     </tr>
                 </thead>
                 <tbody>
-
+                    <tr v-for="profesor in misdocentes" :key="profesor.idDocente"
+                        v-on:click="modificarDocente(profesor)">
+                        <td>{{ profesor.codigo }}</td>
+                        <td>{{ profesor.nombre }}</td>
+                        <td>{{ profesor.dui }}</td>
+                        <td>{{ profesor.direccion }}</td>
+                        <td>{{ profesor.telefono }}</td>
+                        <td>
+                            <input v-on:click="eliminarDocente(profesor.idDocente)" type="button"
+                                class="btn btn-outline-danger text-white" value="del">
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </form>
+<script src="public/vistas/docentes/buscar-docentes.js"></script>

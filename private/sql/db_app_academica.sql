@@ -32,6 +32,13 @@ CREATE TABLE `docentes` (
   `telefono` char(9) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+CREATE TABLE `materias` (
+  `idMateria` int(10) NOT NULL,
+  `codigo` char(10) COLLATE utf8_spanish_ci NOT NULL,
+  `nombre` char(50) COLLATE utf8_spanish_ci NOT NULL,
+  `ciclo` int(2) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
 --
 -- Indices de la tabla `alumnos`
 --
@@ -45,7 +52,13 @@ ALTER TABLE `alumnos`
 ALTER TABLE `docentes`
   ADD PRIMARY KEY (`idDocente`),
   ADD UNIQUE KEY `codigo` (`codigo`);
-  
+
+--
+-- Indices de la tabla `materias`
+--
+ALTER TABLE `materias`
+  ADD PRIMARY KEY (`idMateria`),
+  ADD UNIQUE KEY `codigo` (`codigo`); 
 --
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
@@ -57,3 +70,9 @@ ALTER TABLE `alumnos`
 --
 ALTER TABLE `docentes`
   MODIFY `idDocente` int(10) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `materias`
+--
+ALTER TABLE `materias`
+  MODIFY `idMateria` int(10) NOT NULL AUTO_INCREMENT;
+
