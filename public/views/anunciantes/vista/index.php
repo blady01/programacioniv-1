@@ -9,8 +9,8 @@
 		<br>
 		<div class="jumbotron">
 			<div class="container">
-				<h1>!Bienvenido Anunciante!</h1>
-				<p>Procede a Loguearte</p>
+				<h1>¡Bienvenido Anunciante!</h1>
+				<p>Procede a loguearte para publicar tu anuncio</p>
 				<p>
 					<a href="login.php" class="btn btn-primary btn-lg">Login</a>
 				</p>

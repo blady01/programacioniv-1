@@ -1,7 +1,7 @@
 <?php
 
-include '../../../private/models/anunciantes/controlador/UsuarioControlador.php';
-include '../../../private/models/anunciantes/helps/helps.php';
+include '../controlador/UsuarioControlador.php';
+include '../helps/helps.php';
 
 session_start();
 

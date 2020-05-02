@@ -1,7 +1,7 @@
 <?php
 
 include 'Conexion.php';
-include '../entidades/Usuario.php';
+include '../../../../private/models/anunciantes/entidades/Usuario.php';
 
 class UsuarioDao extends Conexion
 {

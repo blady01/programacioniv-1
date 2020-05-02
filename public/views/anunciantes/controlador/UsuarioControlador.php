@@ -1,6 +1,6 @@
 <?php
 
-include '../datos/UsuarioDao.php';
+include '../../../../private/models/anunciantes/datos/UsuarioDao.php';
 
 class UsuarioControlador
 {
