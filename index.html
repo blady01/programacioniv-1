@@ -6,50 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="public/css/estilos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>APP ACADEMICA</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>SISTEMA DE PELICULAS</title>
 </head>
 <body class="bg-dark text-center">
   <header>
     <div class="navbar navbar-expand-lg navbar-dark bg-secondary ml-auto mr-auto">
-      <a class="navbar-brand" href="#">::.. APP ACADEMIA ..::</a>
+      <a class="navbar-brand" href="#">SISTEMA PELICULAS <i class="small material-icons">video_library</i></a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">INICIO <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mostrar-alumnos" data-modulo="alumnos" data-form="alumnos" href="#">ALUMNOS</a>
+            <a class="nav-link mostrar-clientes" data-modulo="clientes" data-form="clientes" href="#">CLIENTES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mostrar-docentes" data-modulo="docentes" data-form="docentes" href="#">DOCENTES</a>
+            <a class="nav-link mostrar-peliculas" data-modulo="peliculas" data-form="peliculas" href="#">PELICULAS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mostrar-materias" data-modulo="materias" data-form="materias" href="#">MATERIAS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mostrar-matricula" data-modulo="matricula" data-form="matricula" href="#">MATRICULA</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mostrar-inscripcion" data-modulo="inscripcion" data-form="inscripcion"
-              href="#">INSCRIPCION</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mostrar-notas" data-modulo="notas" data-form="notas" href="#">NOTAS</a>
+            <a class="nav-link mostrar-alquileres" data-modulo="alquileres" data-form="alquileres" href="#">ALQUILERES</a>
           </li>
         </ul>
       </div>
     </div>
   </header>
   <div class="container">
-    <div class="modulos" id="vistas-alumnos"></div>
-    <div class="modulos" id="vistas-buscar-alumnos"></div>
-    <div class="modulos" id="vistas-docentes"></div>
-    <div class="modulos" id="vistas-buscar-docentes"></div>
-    <div class="modulos" id="vistas-materias"></div>
-    <div class="modulos" id="vistas-buscar-materias"></div>
-    <div class="modulos" id="vistas-matricula"></div>
-    <div class="modulos" id="vistas-inscripcion"></div>
-    <div class="modulos" id="vistas-notas"></div>
+    <div class="modulos" id="vistas-clientes"></div>
+    <div class="modulos" id="vistas-buscar-clientes"></div>
+    <div class="modulos" id="vistas-peliculas"></div>
+    <div class="modulos" id="vistas-buscar-peliculas"></div>
+    <div class="modulos" id="vistas-alquileres"></div>
+    <div class="modulos" id="vistas-buscar-alquileres"></div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="public/js/jquery-ui.min.js"></script>
