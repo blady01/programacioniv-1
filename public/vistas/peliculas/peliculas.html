@@ -12,7 +12,8 @@
                     DESCRIPCION:
                 </div>
                 <div class="col-8">
-                    <input type="text" v-model="pelicula.descripcion" placeholder="XXX XXX" class="form-control">
+                    <textarea  v-model="pelicula.descripcion" placeholder="XXX XXX" class="form-control" cols="10"
+                    rows="5" placeholder="Escriba descripcion aqui.."></textarea>
                 </div>
             </div>
             <div class="row p-2">
@@ -20,7 +21,8 @@
                     SIPNOSIS:
                 </div>
                 <div class="col-8">
-                    <input type="text" v-model="pelicula.sipnosis" placeholder="XXX XXX" class="form-control">
+                    <textarea type="text" v-model="pelicula.sipnosis" placeholder="XXX XXX" class="form-control" cols="10"
+                    rows="3" placeholder="Escriba sipnosis aqui.."></textarea>
                 </div>
             </div>
             <div class="row p-2">
