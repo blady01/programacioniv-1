@@ -24,8 +24,8 @@ class pelicula{
         if( empty($this->datos['descripcion']) ){
             $this->respuesta['msg'] = 'por favor ingrese el descripcion de la pelicula';
         }
-        if( empty($this->datos['sipnosis']) ){
-            $this->respuesta['msg'] = 'por favor ingrese el sipnosis de la pelicula';
+        if( empty($this->datos['sinopsis']) ){
+            $this->respuesta['msg'] = 'por favor ingrese el sinopsis de la pelicula';
         }
         if( empty($this->datos['genero']) ){
             $this->respuesta['msg'] = 'por favor ingrese la genero de la pelicula';
@@ -39,9 +39,9 @@ class pelicula{
         if( $this->respuesta['msg']==='correcto' ){
             if( $this->datos['accion']==='nuevo' ){
                 $this->db->consultas('
-                    INSERT INTO peliculas (descripcion,sipnosis,genero,duracion) VALUES(
+                    INSERT INTO peliculas (descripcion,sinopsis,genero,duracion) VALUES(
                         "'. $this->datos['descripcion'] .'",
-                        "'. $this->datos['sipnosis'] .'",
+                        "'. $this->datos['sinopsis'] .'",
                         "'. $this->datos['genero'] .'",
                         "'. $this->datos['duracion'] .'"
                     )
@@ -51,7 +51,7 @@ class pelicula{
                 $this->db->consultas('
                    UPDATE peliculas SET
                         descripcion     = "'. $this->datos['descripcion'] .'",
-                        sipnosis        = "'. $this->datos['sipnosis'] .'",
+                        sinopsis        = "'. $this->datos['sinopsis'] .'",
                         genero  = "'. $this->datos['genero'] .'",
                         duracion   = "'. $this->datos['duracion'] .'"
                     WHERE idPelicula = "'. $this->datos['idPelicula'] .'"
@@ -62,9 +62,9 @@ class pelicula{
     }
     public function buscarPelicula($valor=''){
         $this->db->consultas('
-            select peliculas.idPelicula, peliculas.descripcion, peliculas.sipnosis, peliculas.genero, peliculas.duracion
+            select peliculas.idPelicula, peliculas.descripcion, peliculas.sinopsis, peliculas.genero, peliculas.duracion
             from peliculas
-            where peliculas.descripcion like "%'.$valor.'%" or peliculas.sipnosis like "%'.$valor.'%" or peliculas.genero like "%'.$valor.'%"
+            where peliculas.descripcion like "%'.$valor.'%" or peliculas.sinopsis like "%'.$valor.'%" or peliculas.genero like "%'.$valor.'%"
         ');
         return $this->respuesta = $this->db->obtener_datos();
     }

@@ -18,7 +18,7 @@
                     </tr>
                     <tr>
                         <th>DESCRIPCION</th>
-                        <th>SIPNOSIS</th>
+                        <th>SINOPSIS</th>
                         <th>GENERO</th>
                         <th>DURACION</th>
                         <th> </th>
@@ -28,7 +28,7 @@
                     <tr v-for="movie in mispeliculas" :key="movie.idPelicula"
                         v-on:click="modificarPelicula(movie)">
                         <td>{{ movie.descripcion }}</td>
-                        <td>{{ movie.sipnosis }}</td>
+                        <td>{{ movie.sinopsis }}</td>
                         <td>{{ movie.genero }}</td>
                         <td>{{ movie.duracion }}</td>
                         <td>

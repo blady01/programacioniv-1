@@ -5,7 +5,7 @@ var apppelicula = new Vue({
             idPelicula: 0,
             accion: 'nuevo',
             descripcion: '',
-            sipnosis: '',
+            sinopsis: '',
             genero: '',
             duracion: '',
             msg: ''
@@ -17,7 +17,7 @@ var apppelicula = new Vue({
                 this.pelicula.msg = resp.msg;
                 this.pelicula.idPelicula = 0;
                 this.pelicula.descripcion = '';
-                this.pelicula.sipnosis = '';
+                this.pelicula.sinopsis = '';
                 this.pelicula.genero = '';
                 this.pelicula.duracion = '';
                 this.pelicula.accion = 'nuevo';
