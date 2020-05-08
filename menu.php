@@ -46,7 +46,7 @@
             <!----------------- SOLO PARTE PUBLICA(no privada)------------------>
             <?php } else { ?>
               <li><a href='<?php echo RUTA;?>/empresa.php'><span class="glyphicon glyphicon-home"></span> Empresa</a></li>
-              <li><a href='<?php echo RUTA;?>/oferente.php'><span class="glyphicon glyphicon-user"></span>Oferente</a></li>
+              <li><a href='<?php echo RUTA;?>/oferente.php'><span class="glyphicon glyphicon-user"></span> Oferente</a></li>
               <li><a href='<?php echo RUTA;?>/login.php'><span class="glyphicon glyphicon-log-in"></span> Inicio de sesión</a></li>
               <li><a href='<?php echo RUTA;?>/index.php#ancla'></span> Acerca de</a></li>
             <?php } ?>              

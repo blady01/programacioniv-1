@@ -192,7 +192,7 @@ require_once("conexion.php");
 
   <footer class="main-footer" style="margin-left: 0px;">
     <div class="text-center">
-      <strong> 2020 - Usu Empleo</a>.</strong> 
+      <strong> ©2020 Quick Tech - Todos los Derechos Reservados </a>.</strong> 
     </div>
   </footer>
 
