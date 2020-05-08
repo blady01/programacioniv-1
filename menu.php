@@ -32,7 +32,7 @@
               ?>
               <li><a href='<?php echo RUTA;?>/oferente/perfil'>Perfil</a></li>
               <li><a href='<?php echo RUTA;?>/oferente/trabajos_aplicados.php'>Mis Trabajos Aplicados</a></li>
-              <li><a href='<?php echo RUTA;?>/cerrar_sesion.php'>Cerrar sesión</a></li>
+              <li><a href='<?php echo RUTA;?>/cerrar_sesion.php'><span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a></li>
             
             <!-----------------LOGUEADO COMO EMPRESA------------------>
             <?php
@@ -41,14 +41,14 @@
             <li><a href='<?php echo RUTA;?>/empresa/buscar_oferente.php'>Buscar Oferentes</a></li>
             <li><a href='<?php echo RUTA;?>/empresa/crear_puestoTrabajo.php'>Agregar Puestos</a></li>
             <li><a href='<?php echo RUTA;?>/empresa/trabajos_publicados.php'>Puestos Publicados</a></li>
-            <li><a href='<?php echo RUTA;?>/cerrar_sesion.php'><span class="glyphicon glyphicon-log-in"></span> Cerrar sesión</a></li>
+            <li><a href='<?php echo RUTA;?>/cerrar_sesion.php'><span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a></li>
 
             <!----------------- SOLO PARTE PUBLICA(no privada)------------------>
             <?php } else { ?>
               <li><a href='<?php echo RUTA;?>/empresa.php'><span class="glyphicon glyphicon-home"></span> Empresa</a></li>
               <li><a href='<?php echo RUTA;?>/oferente.php'><span class="glyphicon glyphicon-user"></span> Oferente</a></li>
               <li><a href='<?php echo RUTA;?>/login.php'><span class="glyphicon glyphicon-log-in"></span> Inicio de sesión</a></li>
-              <li><a href='<?php echo RUTA;?>/index.php#ancla'></span> Acerca de</a></li>
+              <li><a href='<?php echo RUTA;?>/index.php#ancla'><span class="glyphicon glyphicon-info-sign"></span> Acerca de</a></li>
             <?php } ?>              
             </ul>
           </div><!-- /.navbar-collapse -->
