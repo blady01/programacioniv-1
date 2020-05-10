@@ -61,7 +61,7 @@ if(isset($_POST)){
 
 		if($result->num_rows == 0) {
 		
-			$sql = "INSERT INTO oferentes(idOferente,nombre, apellido, correo, nacionalidad,telefono,residencia,aprobado,curriculum,clave) VALUES ('$id','$nombre','$apellido','$correo','$nacionalidad','$telefono','$residencia',2,'$nombreCurriculum','$password')";//2 porque es pendiente
+			$sql = "INSERT INTO oferentes(idOferente,nombre,apellido,correo,nacionalidad,telefono,residencia,aprobado,curriculum,clave) VALUES ('$id','$nombre','$apellido','$correo','$nacionalidad','$telefono','$residencia',2,'$nombreCurriculum','$password')";//2 porque es pendiente
 
 			if($conn->query($sql)===TRUE) {//si se inserto el oferente vamos a insertar las caracteristicas
 

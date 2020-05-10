@@ -22,12 +22,6 @@ require_once("../conexion.php");
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
   <body>
     
@@ -43,7 +37,7 @@ require_once("../conexion.php");
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../index.php">Usu Empleo</a>
+            <a class="navbar-brand" href="panel.php"><span class="glyphicon glyphicon-briefcase"></span> Usu Empleo</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -65,7 +59,7 @@ require_once("../conexion.php");
             <a href="oferente.php" class="list-group-item">Oferentes</a>
             <a href="empresa.php" class="list-group-item active">Empresas</a>
             <a href="puesto.php" class="list-group-item">Puestos de Trabajo</a>
-            <a href="caracteristicas.php" class="list-group-item">Registrar caracteristica</a>
+            <a href="caracteristicas.php" class="list-group-item">Caracteristicas</a>
           </div>
         </div>
         <div class="col-md-8">

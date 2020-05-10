@@ -26,8 +26,6 @@ if(empty($_SESSION['idAdministrador'])) {
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  
-
 </head>
   </head>
   <body>
@@ -44,7 +42,7 @@ if(empty($_SESSION['idAdministrador'])) {
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../index.php">Usu Empleo</a>
+            <a class="navbar-brand" href="panel.php"><span class="glyphicon glyphicon-briefcase"></span> Usu Empleo</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->

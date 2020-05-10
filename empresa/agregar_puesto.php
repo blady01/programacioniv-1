@@ -16,7 +16,7 @@ if(isset($_POST)) {
 	$responsabilidades = mysqli_real_escape_string($conn, $_POST['responsabilidades']);
 	$categoria = mysqli_real_escape_string($conn, $_POST['categoria']);
 
-	$sql = "INSERT INTO puestos(idEmpresa, nombrePuesto, descripcion,fecha,numVacantes,privado,salario,responsabilidades,idCategoria,estadoPuesto) VALUES ('$_SESSION[id_usuario]','$nombrePuesto', '$descripcion', '$fecha', '$numVacantes', '$privado', '$salario','$responsabilidades','$categoria',1)";
+	$sql = "INSERT INTO puestos(idEmpresa,nombrePuesto,descripcion,fecha,numVacantes,privado,salario,responsabilidades,idCategoria,estadoPuesto) VALUES ('$_SESSION[id_usuario]','$nombrePuesto', '$descripcion', '$fecha', '$numVacantes', '$privado', '$salario','$responsabilidades','$categoria',1)";
 
 
 	if($conn->query($sql)===TRUE) {
