@@ -139,7 +139,7 @@ require_once("conexion.php");
           <div class="col-md-6">
             <img src="images/acerca.png" class="img-responsive">
           </div>
-          <div class="col-md-6 about-text margin-bottom-20">
+          <div class="col-md-6 about-text margin-bottom-20 text-justify">
             <h4>La página Usu Empleo posibilita la vinculación entre personas en busca de empleo y empresas o personas con requerimientos de personal, considerando aspectos como ocupación, experiencia, grado académico, entre otros. 
             </h4>
             <h4>
