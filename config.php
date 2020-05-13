@@ -1,5 +1,5 @@
 
 <?php
 //RUTA CON LA CUAL SE PUEDA MANEJAR DE MEJOR MANERA LOS LINKS DEPENDIENDO EL NOMBRE DE CARPETA DONDE ESTA ALOJADO EL PROYECTO
-define("RUTA", "http://localhost/programacioniv");
+define("RUTA", "/programacioniv");
 ?>
