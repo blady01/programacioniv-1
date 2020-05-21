@@ -1,9 +1,9 @@
 <?php
 session_start();
 if(empty($_SESSION['id_usuario'])) {
-    header("Location: oferente/panel.php");
-    exit();
-  }
+  header("Location: ../index.php");
+  exit();
+}
 require_once("../conexion.php");
 ?>
 <!DOCTYPE html>

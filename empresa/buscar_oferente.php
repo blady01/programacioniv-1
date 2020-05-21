@@ -2,6 +2,10 @@
 session_start();
 header("Content-Type: text/html;charset=utf-8");
 require_once("../conexion.php");
+if(empty($_SESSION['id_usuario'])) {
+  header("Location: ../index.php");
+  exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">

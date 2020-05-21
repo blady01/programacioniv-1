@@ -6,7 +6,7 @@ session_start();
 // Si el usuario no ha iniciado sesión, redirija a la página de inicio.
 // Esto es obligatorio si el usuario intenta ingresar dashboard.php manualmente en la URL.
 if(empty($_SESSION['idAdministrador'])) {
-  header("Location: index.php");
+  header("Location: ../index.php");
   exit();
 }
 
@@ -62,9 +62,10 @@ if(empty($_SESSION['idAdministrador'])) {
           <div class="list-group">
             <a href="panel.php" class="list-group-item">Panel</a>
             <a href="oferente.php" class="list-group-item">Oferentes</a>
-            <a href="empresa.php" class="list-group-item">Empresa</a>
+            <a href="empresa.php" class="list-group-item">Empresas</a>
             <a href="puesto.php" class="list-group-item">Puestos de Trabajo</a>
             <a href="caracteristicas.php" class="list-group-item active">Caracteristicas</a>
+            <a href="chat.php" class="list-group-item">Chat</a>
           </div>
         </div>
         <div class="col-md-8">

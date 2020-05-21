@@ -3,7 +3,7 @@
 session_start();
 
 if(empty($_SESSION['idAdministrador'])) {
-  header("Location: index.php");
+  header("Location: ../index.php");
   exit();
 }
 
@@ -60,6 +60,7 @@ require_once("../conexion.php");
             <a href="empresa.php" class="list-group-item">Empresas</a>
             <a href="puesto.php" class="list-group-item">Puestos de Trabajo</a>
             <a href="caracteristicas.php" class="list-group-item">Caracteristicas</a>
+            <a href="chat.php" class="list-group-item">Chat</a>
           </div>
         </div>
          <div class="col-md-8">
