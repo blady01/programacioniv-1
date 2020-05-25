@@ -23,8 +23,13 @@ require_once("../conexion.php");
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
       #messenger {
+        position: relative;
         height: 400px;
         border: 1px solid #000;
+        word-wrap: break-word;
+        hyphens:auto;
+        clear: both;
+        overflow: auto;
       }
     </style>
   </head>
