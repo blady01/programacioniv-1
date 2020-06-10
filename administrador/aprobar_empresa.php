@@ -10,7 +10,7 @@ if(empty($_SESSION['idAdministrador'])) {
 
 require_once("../conexion.php");
 
-if(isset($_GET)) {
+if(isset($_POST)) {
 
 	//---------------------------------------CODIGO PARA GENERAR CONTRASEÑA-------------------------------------
 /*
@@ -40,7 +40,7 @@ if(isset($_GET)) {
 	//encryptar la contrasena
 	//$codReserva = base64_encode(strrev(md5($codReserva)));
 
-	$sql = "UPDATE  empresas SET aprobado='1' WHERE idEmpresa='$_GET[id]'";
+	$sql = "UPDATE  empresas SET aprobado='1' WHERE idEmpresa='$_POST[id]'";
 	if($conn->query($sql)) {
 		header("Location: panel.php");
 		exit();

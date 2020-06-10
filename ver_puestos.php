@@ -40,7 +40,7 @@ require_once("conexion.php");
       </div>
       <?php unset($_SESSION['jobApplySuccess']); } ?>
       
-      <!-- otras funciones del panel -->
+      <!-- otras funciones del panel (barra de busqueda) -->
       <div class="row">
         
         <div class="col-md-4 col-md-offset-0">

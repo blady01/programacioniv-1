@@ -37,7 +37,7 @@ if(isset($_POST)) {
 
 			if($tipoUsuario=='admin'){
 				$_SESSION['idAdministrador'] = $row['idAdministrador'];
-				header("Location: administrador/panel.php");
+				echo("administrador/panel.php");
 				exit();
 			}
 
@@ -46,12 +46,12 @@ if(isset($_POST)) {
 
 				if($row['aprobado'] == '2') {
 					$_SESSION['msjLoginError'] = "Su cuenta aun esta pendiente de aprobacion.";
-					header("Location: login.php");
+					echo("login.php");
 					exit();
 				} 
 				else if($row['aprobado'] == '0') {
 					$_SESSION['msjLoginError'] = "Su cuenta fue rechazada. Para mayor informacion contactenos.";
-					header("Location: login.php");
+					echo("login.php");
 					exit();
 				} 
 				else if($row['aprobado'] == '1') {//SE PUEDE LOGUEAR NORMALMENTE
@@ -62,7 +62,7 @@ if(isset($_POST)) {
 						$_SESSION['correo'] = $row['correo'];
 						$_SESSION['id_usuario'] = $row['idEmpresa'];
 						$_SESSION['empresaLogeada'] = true;
-						header("Location: empresa/trabajos_publicados.php");
+						echo("empresa/trabajos_publicados.php");
 						exit();
 					}
 					//SI ES UN OFERENTE
@@ -70,7 +70,7 @@ if(isset($_POST)) {
 						$_SESSION['nombre'] = $row['nombre'] . " " . $row['apellido'];
 						$_SESSION['correo'] = $row['correo'];
 						$_SESSION['id_usuario'] = $row['idOferente'];
-						header("Location: ver_puestos.php");
+						echo("ver_puestos.php");
 						exit();
 					}
 
@@ -78,9 +78,9 @@ if(isset($_POST)) {
 			}//fin de if de empresa y oferente
 		}//fin de while
  	} else {
- 		$_SESSION['msjLoginError'] = "Error. Usuario/Contrseña Incorrectos";
+ 		$_SESSION['msjLoginError'] = "Error. Usuario/Contraseña Incorrectos";
   		//$_SESSION['msjLoginError'] = "Error.".$sql;
- 		header("Location: login.php");
+ 		echo("login.php");
 		exit();
  	}
 
@@ -88,6 +88,6 @@ if(isset($_POST)) {
 
 } else {
 	//redirect them back to login page
-	header("Location: login.php");
+	echo("login.php");
 	exit();
 }
