@@ -6,7 +6,7 @@ session_start();
 // Si el usuario no ha iniciado sesión, redirija a la página de inicio.
 // Esto es obligatorio si el usuario intenta ingresar dashboard.php manualmente en la URL.
 if(empty($_SESSION['idAdministrador'])) {
-  header("Location: ../index.php");
+  header("Location: ../login.php");
   exit();
 }
 

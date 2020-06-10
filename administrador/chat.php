@@ -3,7 +3,7 @@
 session_start();
 
 if(empty($_SESSION['idAdministrador'])) {
-  header("Location: ../index.php");
+  header("Location: ../login.php");
   exit();
 }
 
@@ -21,17 +21,6 @@ require_once("../conexion.php");
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <style>
-      #messenger {
-        position: relative;
-        height: 400px;
-        border: 1px solid #000;
-        word-wrap: break-word;
-        hyphens:auto;
-        clear: both;
-        overflow: auto;
-      }
-    </style>
   </head>
   <body>
     
@@ -76,10 +65,18 @@ require_once("../conexion.php");
         <div class="container">
           <div class="row">
             <div class="col-md-6 offset-md-3 col-sm-12">
+            <?php
+               $sql = 'SELECT * FROM administradores WHERE idAdministrador='. $_SESSION['idAdministrador'] .'';
+               $result = $conn->query($sql);
+               $row = $result->fetch_assoc();
+                echo '<h3> Administrador: ' . $row['nick'] . '</h3>'  
+            ?>
+             <input type="text" id="User" value='<?php echo $row['nick']; ?>' style="display:none;"></input>
              <form class="form-inline" v-on:submit.prevent="enviarMensaje" v-on:reset="limpiarChat" id="frm-chat">
-              <div id="messenger">
+              <div id="messenger" style=" position: relative; height: 400px; border: 1px solid #000; word-wrap: break-word;
+                hyphens:auto; clear: both; overflow: auto;">
                 <ul v-for="msg in msgs" id="messages">
-                  <li>Mensaje: {{ msg }}</li>
+                  <li> {{ msg.user }}: {{ msg.msg }}</li>
                 </ul>
               </div><br>
               <ul class="text-center" id="InputMessages">
@@ -108,7 +105,14 @@ require_once("../conexion.php");
               },
               methods:{
                   enviarMensaje(){
-                      socket.emit('enviarMensaje', this.msg);
+                      
+                      var datos = { 
+                        user: document.querySelector("#User").value,
+                        msg: this.msg
+                      };
+                      console.log(document.querySelector("#User").value)
+                      socket.emit('enviarMensaje', datos);
+                      socket.emit('chatHistory');
                       this.msg = '';
                   },
                   limpiarChat(){
@@ -121,12 +125,12 @@ require_once("../conexion.php");
           });
           socket.on('recibirMensaje',msg=>{
               console.log(msg);
-              appchat.msgs.push(msg);
+              //appchat.msgs.push(msg);
           });
           socket.on('chatHistory',msgs=>{
               appchat.msgs = [];
               msgs.forEach(item => {
-                  appchat.msgs.push(item.msg);
+                  appchat.msgs.push(item);
               });
           });
     </script>
