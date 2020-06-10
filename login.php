@@ -30,7 +30,7 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-4 well">
           <h2 class="text-center">Iniciar sesión</h2>
-            <form method="post"  id="frmLogin">
+            <form method="post"  action="comprobar_login.php">
 
                <div class="form-group">
                 <label>Iniciar Sesión como:</label>
@@ -82,7 +82,6 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
@@ -92,43 +91,6 @@
       });
    
    </script>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
-
-    <!-- config firebase -->
-    <script src="js/configFirebase.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
-
-    <!-- Logueo con email y password con firebase -->  
-    <script>
-        document.addEventListener("DOMContentLoaded", e=>{
-          document.querySelector("#frmLogin").addEventListener("submit", event=>{
-             event.preventDefault();
-             let email=document.getElementById('correo').value;
-             let pass=document.getElementById('password').value;
-             let tipoInicio=document.getElementById('tipoInicio').value;
-             firebase.auth().signInWithEmailAndPassword(email, pass).then(function (user) {
-                //Autentificacion con exito
-                let formulario = new FormData(document.getElementById("frmLogin"));
-
-               fetch('comprobar_login.php', {
-                  method: 'post', // or 'PUT'
-                  body: formulario // data can be `string` or {object}
-                }).then(res => res.text())
-                  .then(response =>{
-                  window.location=response
-                });
-              }).catch(function (error) {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-
-                console.log(errorMessage);
-                console.log(errorCode);
-              });
-          });
-        });
-    </script>
+   
   </body>
 </html>
