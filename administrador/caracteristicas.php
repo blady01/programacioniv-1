@@ -25,6 +25,7 @@ if(empty($_SESSION['idAdministrador'])) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/tablas.css">
 
 </head>
   </head>
@@ -59,7 +60,7 @@ if(empty($_SESSION['idAdministrador'])) {
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-4">
-          <div class="list-group">
+          <div class="list-group" >
             <a href="panel.php" class="list-group-item">Panel</a>
             <a href="oferente.php" class="list-group-item">Oferentes</a>
             <a href="empresa.php" class="list-group-item">Empresas</a>
@@ -85,6 +86,7 @@ if(empty($_SESSION['idAdministrador'])) {
                           <th>Tipo de caracteristica</th>
                           <th>Caracteristica</th>
                           <th>Administrador</th>
+                          <th></th>
                   
                         </thead>
                         <tbody>
@@ -101,7 +103,7 @@ if(empty($_SESSION['idAdministrador'])) {
                                     <td><?php echo $row['nombre']; ?></td>
                                     <td><?php echo $row['admin']; ?></td>
                               
-                                    <td><a href="borrar_caracteristica.php?id=<?php echo $row['idCaracteristica']; ?>">Borrar</a></td>
+                                    <td><a href="borrar_caracteristica.php?id=<?php echo $row['idCaracteristica']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                                   </tr>
                                 <?php
                               }
@@ -167,6 +169,8 @@ if(empty($_SESSION['idAdministrador'])) {
           </div>
         </div>
 
+
+        <script src="https://kit.fontawesome.com/2f2a4cd560.js" crossorigin="anonymous"></script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

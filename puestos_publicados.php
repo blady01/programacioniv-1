@@ -15,6 +15,7 @@ if(isset($_GET['id'])){
     <meta http-equiv="Content-Type" content="text/html; charset= ISO-8859-1" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <link rel="stylesheet" href="css/buscador.css" type="text/css">
+    <link rel="stylesheet" href="css/tablas.css">
 
 
     <title>Puestos Públicados</title>

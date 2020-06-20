@@ -22,10 +22,20 @@ if(empty($_SESSION['idAdministrador'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Panel</title>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+  
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+ <link rel="stylesheet" href="../css/tablas.css">
   </head>
   <body>
     
@@ -47,7 +57,7 @@ if(empty($_SESSION['idAdministrador'])) {
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">     
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../cerrar_sesion.php"><span class="glyphicon glyphicon-log-in"></span> Cerrar sesión</a></li>
+              <li onclick="cerrarSesion()"><a  href="#"><span class="glyphicon glyphicon-log-in"></span>  Cerrar sesión</a></li>
 
             </ul>
           </div><!-- /.navbar-collapse -->
@@ -55,10 +65,10 @@ if(empty($_SESSION['idAdministrador'])) {
       </nav>
     </header>
 
-    <div class="container-fluid">
+    <div class="container-fluid" >
       <div class="row">
-        <div class="col-md-4">
-          <div class="list-group">
+        <div class="col-md-4" >
+          <div class="list-group" >
             <a href="panel.php" class="list-group-item active">Panel</a>
             <a href="oferente.php" class="list-group-item">Oferentes</a>
             <a href="empresa.php" class="list-group-item">Empresas</a>
@@ -91,11 +101,12 @@ if(empty($_SESSION['idAdministrador'])) {
           <table class="table">
             <thead>
               <th>No</th>
-              <th>Nombre empresa</th>
+              <th>Nombre </th>
               <th>Descripcion</th>
               <th>Correo</th>
               <th>Telefono</th>
               <th>Accion</th>
+              <th> </th>
             </thead>
             <tbody>
               <?php
@@ -111,8 +122,8 @@ if(empty($_SESSION['idAdministrador'])) {
                         <td><?php echo $row['descripcion']; ?></td>
                         <td><?php echo $row['correo']; ?></td>
                         <td><?php echo $row['telefono']; ?></td>
-                        <td><a href="rechazar_empresa.php?id=<?php echo $row['idEmpresa']; ?>">Rechazar</a></td>
-                        <td><a href="aprobar_empresa.php?id=<?php echo $row['idEmpresa']; ?>">Aprobar</a></td>
+                        <td><a href="rechazar_empresa.php?id=<?php echo $row['idEmpresa']; ?>"><i class="fa fa-ban" aria-hidden="true"></i></a></td>
+                        <td><a href="aprobar_empresa.php?id=<?php echo $row['idEmpresa']; ?>"><span class="fa fa-check" aria-hidden="true"></span></a></td>
                       </tr>
                     <?php
                   }
@@ -142,6 +153,7 @@ if(empty($_SESSION['idAdministrador'])) {
               <th>Telefono</th>
               <th>Residencia</th>
               <th>Accion</th>
+              <th> </th>
             </thead>
             <tbody>
               <?php
@@ -159,8 +171,8 @@ if(empty($_SESSION['idAdministrador'])) {
                         <td><?php echo $row['nacionalidad']; ?></td>
                         <td><?php echo $row['telefono']; ?></td>
                         <td><?php echo $row['residencia']; ?></td>
-                        <td><a href="rechazar_oferente.php?id=<?php echo $row['idOferente']; ?>">Rechazar</a></td>
-                        <td><a href="aprobar_oferente.php?id=<?php echo $row['idOferente']; ?>">Aprobar</a></td>
+                        <td><a href="rechazar_oferente.php?id=<?php echo $row['idOferente']; ?>"> <i class="fa fa-ban" aria-hidden="true"></i></a></td>
+                        <td><a href="aprobar_oferente.php?id=<?php echo $row['idOferente']; ?>"><i class="fa fa-check" aria-hidden="true"></i></a></td>
                       </tr>
                     <?php
                   }
@@ -176,6 +188,42 @@ if(empty($_SESSION['idAdministrador'])) {
       </div>
     </div>
 
+
+
+<script >
+    document.addEventListener("DOMContentLoaded", function(event) {
+         let contador = sessionStorage.getItem('cont')
+         if(!contador==1){
+          alertify.set('notifier', 'position', 'top-center');
+          alertify.success('Bienvenido')
+          sessionStorage.setItem('cont', '1')
+         } 
+   
+});
+
+      function cerrarSesion(){
+        console.log('QUE?')
+        alertify.confirm('Alerta', '¿Está seguro de cerrar esta sesión?', function () {
+          sessionStorage.clear()
+          window.location = '../cerrar_sesion.php'
+         }, function () {
+        alertify.error('Cancelado');
+
+    });
+      }
+
+      function alertaRechazar(){
+        alertify.confirm('Alerta', 'Se rechazará a este oferente', function () {
+          window.location = '../cerrar_sesion.php'
+         }, function () {
+        alertify.error('Cancelado');
+
+    });
+      }
+</script>
+<script src="https://kit.fontawesome.com/2f2a4cd560.js" crossorigin="anonymous"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

@@ -19,6 +19,7 @@ require_once("conexion.php");
     <!--API DE GOOGLE-->
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?&language=es&region=SV&key=AIzaSyAtkovx7YEf0xJd4GW71JgsEjjZoFMU0F4"></script>
     <script type="text/javascript" src="js/mapEmpresas.js"></script>
+    <link rel="stylesheet" href="css/tablas.css">
 
   </head>
   <body>

@@ -18,9 +18,12 @@ require_once("../conexion.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Panel</title>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/tablas.css">
 
   </head>
   <body>
@@ -53,7 +56,7 @@ require_once("../conexion.php");
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" >
           <div class="list-group">
             <a href="panel.php" class="list-group-item">Panel</a>
             <a href="oferente.php" class="list-group-item active">Oferentes</a>
@@ -99,7 +102,7 @@ require_once("../conexion.php");
                         <td><?php echo $row['nacionalidad']; ?></td>
                         <td><?php echo $row['telefono']; ?></td>
                         <td><?php echo $row['residencia']; ?></td>
-                        <td><a href="borrar_oferente.php?id=<?php echo $row['idOferente']; ?>">Borrar</a></td>
+                        <td><a href="borrar_oferente.php?id=<?php echo $row['idOferente']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                       </tr>
                     <?php
                   }
@@ -110,6 +113,8 @@ require_once("../conexion.php");
  
       </div>
     </div>
+    <script src="https://kit.fontawesome.com/2f2a4cd560.js" crossorigin="anonymous"></script>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

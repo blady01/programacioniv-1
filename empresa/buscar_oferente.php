@@ -16,6 +16,8 @@ if(empty($_SESSION['id_usuario'])) {
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta http-equiv="Content-Type" content="text/html; charset= ISO-8859-1" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet" href="../css/tablas.css">
+    <link rel="stylesheet" href="../css/menu.css">
 
 
     <title>Panel</title>

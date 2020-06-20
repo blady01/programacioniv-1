@@ -21,6 +21,7 @@ if(isset($_SESSION['id_usuario'])) {
     <!--API DE GOOGLE-->
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?&language=es&region=CR&key=AIzaSyAtkovx7YEf0xJd4GW71JgsEjjZoFMU0F4"></script>
     <script type="text/javascript" src="js/map.js"></script>
+    <link rel="stylesheet" href="css/tablas.css">
 
   </head>
   <body>

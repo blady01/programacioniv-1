@@ -21,6 +21,8 @@ require_once("../conexion.php");
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/tablas.css">
+
   </head>
   <body>
     
@@ -89,6 +91,9 @@ require_once("../conexion.php");
       </div>
     </div>
 </div>
+
+<script src="https://kit.fontawesome.com/2f2a4cd560.js" crossorigin="anonymous"></script>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

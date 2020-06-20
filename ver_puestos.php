@@ -13,7 +13,15 @@ require_once("conexion.php");
     <meta http-equiv="Content-Type" content="text/html; charset= ISO-8859-1" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <link rel="stylesheet" href="css/buscador.css" type="text/css">
-
+    <link rel="stylesheet" href="css/tablas.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+  
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
 
     <title>Panel</title>
 
@@ -40,7 +48,7 @@ require_once("conexion.php");
       </div>
       <?php unset($_SESSION['jobApplySuccess']); } ?>
       
-      <!-- otras funciones del panel (barra de busqueda) -->
+      <!-- otras funciones del panel -->
       <div class="row">
         
         <div class="col-md-4 col-md-offset-0">
@@ -84,10 +92,12 @@ require_once("conexion.php");
                   if(isset($_SESSION['id_usuario'])){
 
                     $sql = "SELECT DISTINCT puestos.idPuesto,puestos.nombrePuesto,puestos.descripcion,puestos.salario,puestos.numVacantes,puestos.responsabilidades,puestos.fecha FROM caracteristicas JOIN requisitos_puesto ON caracteristicas.idCaracteristica = requisitos_puesto.idCaracteristicas JOIN puestos ON puestos.idPuesto = requisitos_puesto.idPuesto WHERE caracteristicas.nombre LIKE '%".$buscar."%'";
+                    $ses = 1;
                   }
                   else{//si no esta registrado
 
                     $sql = "SELECT DISTINCT puestos.idPuesto,puestos.nombrePuesto,puestos.descripcion,puestos.salario,puestos.numVacantes,puestos.responsabilidades,puestos.fecha FROM caracteristicas JOIN requisitos_puesto ON caracteristicas.idCaracteristica = requisitos_puesto.idCaracteristicas JOIN puestos ON puestos.idPuesto = requisitos_puesto.idPuesto WHERE caracteristicas.nombre LIKE '%".$buscar."%' AND privado=0";//seleccionar publicos
+                    $ses = 0;
                   }
 
 
@@ -153,6 +163,22 @@ require_once("conexion.php");
         </div>
       </div>
     </div>
+<input type="text" id="Session" value='<?php echo $ses; ?>' style="display:none;"></input>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      let session = document.querySelector('#Session').value
+      if(session==1){
+        let contador = sessionStorage.getItem('cont')
+         if(!contador==1){
+          alertify.set('notifier', 'position', 'top-center');
+          alertify.success('Bienvenido')
+          sessionStorage.setItem('cont', '1')
+         } 
+      } 
+    });
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

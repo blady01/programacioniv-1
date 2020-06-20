@@ -22,6 +22,7 @@ require_once("conexion.php");
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/tablas.css">
 
   </head>
   <body>
@@ -105,7 +106,7 @@ require_once("conexion.php");
                     while($row = $result->fetch_assoc()) 
                     {
                   ?>
-                    <option value='<?php echo $row['idTipoCaracteristica']; ?>'><?php echo $row['nombre']; ?></option>
+                    <option style="text-color:#0000 !important;" value='<?php echo $row['idTipoCaracteristica']; ?>'><?php echo $row['nombre']; ?></option>
                   <?php
                     }//cierre de while
                     }//cierre de if          

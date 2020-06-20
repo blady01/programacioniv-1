@@ -1,4 +1,4 @@
-.carousel-control.left,
+/*.carousel-control.left,
 .carousel-control.right {
 	opacity: 1;
 	filter: alpha(opacity=100);
@@ -9,4 +9,4 @@
 }
 .carousel-indicators .active {background-color: #ff5900;}
 .carousel-control {color: #e2e2e2;}
-.carousel-control {width: 90;}
+.carousel-control {width: 90;}*/

@@ -19,7 +19,9 @@ require_once("conexion.php");
     <link rel="stylesheet" href="css/carrusel.css" type="text/css">
     <link rel="stylesheet" href="css/custom.css" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
+    <link rel="stylesheet" href="css/tablas.css">
+    <link rel="stylesheet" href="css/menu.css">
+
 
   </head>
   <body>
@@ -165,25 +167,25 @@ require_once("conexion.php");
       <span class="glyphicon glyphicon-cog"></span>
       <h3>Soluciones Tecnológicas</h3>
       <p>Desde las oficinas técnicas de Usu Empleo ofrecemos servicios en función de las necesidades de cada cliente y con la opción de desarrollar proyectos llave en mano. Disponemos de una importante capacidad de back office que se adapta a las necesidades de nuestros clientes. </p>
-      <p><button class="w3-button w3-light-grey w3-block">Más info+</button></p>
+      <p class="butommm"><button class="w3-button w3-light-grey w3-block ">Más info+</button></p>
     </div>
     <div class="w3-quarter">
       <span class="glyphicon glyphicon-question-sign"></span>
       <h3>Outsourcing y Consultoría</h3>
       <p>Con el servicio de Outsourcing de Usu Empleo nos integramos en la estructura de nuestros clientes dando apoyo en el día a día de las actividades de la empresa. Nuestro equipo de consultores se divide por áreas de especialización, para poder lograr los objetivos.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Más info+</button></p>
+      <p class="butommm"><button class="w3-button w3-light-grey w3-block ">Más info+</button></p>
     </div>
    <div class="w3-quarter">
       <span class="glyphicon glyphicon-pencil"></span>
       <h3>Selección Especializadas</h3>
       <p>Queremos ser el partner de RRHH de nuestros clientes. Gracias a  nuestra experiencia como empresa puntera en el sector tecnológico, conseguimos encontrar al mejor candidato, a nivel técnico como personal y de encaje con la cultura empresarial.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Más info+</button></p>
+      <p class="butommm"><button class="w3-button w3-light-grey w3-block ">Más info+</button></p>
     </div>
   <div class="w3-quarter">
       <span class="glyphicon glyphicon-file"></span>
       <h3>Perfiles disponibles</h3>
       <p>Tenemos perfiles con disponibilidad inmediata para unirse a tu equipo. Recibe nuestra Newsletter mensual con los mejores perfiles de informática e ingeniería. Si alguno resulta de tu interés, sólo tienes que solicitarnos más información.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Más info+</button></p>
+      <p class="butommm"><button class="w3-button w3-light-grey w3-block ">Más info+</button></p>
     </div>
   </div>
 
@@ -198,10 +200,12 @@ require_once("conexion.php");
 
 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script src="js/carrusel.js"></script>
 
