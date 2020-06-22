@@ -7,7 +7,6 @@ if(empty($_SESSION['idAdministrador'])) {
   exit();
 }
 
-
 require_once("../conexion.php");
 ?>
 <!DOCTYPE html>
@@ -91,53 +90,16 @@ require_once("../conexion.php");
       </div>
     </div>
 </div>
-
+<!-- Kit icons font awesome -->
 <script src="https://kit.fontawesome.com/2f2a4cd560.js" crossorigin="anonymous"></script>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
-    <script>
-      var socket = io.connect("http://localhost:3001",{'forceNew':true}),
-          appchat = new Vue({
-              el:'#frm-chat',
-              data:{
-                  msg : '',
-                  msgs : []
-              },
-              methods:{
-                  enviarMensaje(){
-                      
-                      var datos = { 
-                        user: document.querySelector("#User").value,
-                        msg: this.msg
-                      };
-                      console.log(document.querySelector("#User").value)
-                      socket.emit('enviarMensaje', datos);
-                      socket.emit('chatHistory');
-                      this.msg = '';
-                  },
-                  limpiarChat(){
-                      this.msg = '';
-                  }
-              },
-              created(){
-                  socket.emit('chatHistory');
-              }
-          });
-          socket.on('recibirMensaje',msg=>{
-              console.log(msg);
-              //appchat.msgs.push(msg);
-          });
-          socket.on('chatHistory',msgs=>{
-              appchat.msgs = [];
-              msgs.forEach(item => {
-                  appchat.msgs.push(item);
-              });
-          });
-    </script>
+    <script src="../js/chat.js"></script>
+    <script src="../js/notificaciones.js"></script>
+    <script src="../js/push.js"></script>
   </body>
 </html>
