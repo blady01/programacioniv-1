@@ -1,0 +1,49 @@
+ul{
+    margin: 0 !important;
+    padding: 0 !important;
+    
+}
+
+ul li a
+{
+  height: 45px !important;
+  line-height: 50px !important;
+  padding: 0 20px !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  display: block !important;
+}
+ul li a:hover
+{
+    color: #fff !important;
+    background: #2196f3 !important;
+    border-radius: 0.5em !important;
+
+}
+
+@keyframes hue {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+  
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  .usu-empleo
+  {
+    animation: hue 3s linear infinite !important;
+  }
+
+  button
+  {
+    animation: hue 3s linear infinite !important;
+
+  }
+
+  .butommm:hover
+  {
+    animation: hue 3s linear infinite !important;
+
+  }

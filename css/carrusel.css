@@ -1,0 +1,28 @@
+
+.carousel-inner  { max-width: 100%!important ; background-image: radial-gradient(circle at bottom right,rgba(192,192,192,0.3) 10%,rgba(192,192,192,0.3) 90%)!important;}
+/* Carousel Header Styles */
+.header-text {
+
+    top: 35%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #e2e2e2;
+    font-size:20px; letter-spacing:1px;
+    
+}
+.header-text h2 {font-size: 50px; color:#fff; font-weight:600;}
+.header-text h3 span {padding: 15px;}
+
+.carousel-control.left,
+.carousel-control.right {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	background-image: none;
+	background-repeat: no-repeat;
+	text-shadow: none;
+	margin-right: 95px;
+}
+.carousel-indicators .active {background-color: #ff5900;}
+.carousel-control {color: #e2e2e2;}
+.carousel-control {width: 90;}
